@@ -38,6 +38,11 @@ function removeAllLinksUnderElsewhere() {
 /* removeAllLinksUnderElsewhere() */
 
 /* EX15) Write a function to change the column size for heading in jumbotron */
+function changeColumnSizeJumbotron() {
+  const headingDiv = document.querySelector(".jumbotron div")
+  headingDiv.classList.remove("col-md-6")
+  headingDiv.classList.add("col-md-10")
+}
 
 /* EX16) Write a function to remove the "Search" magnifying glass icon */
 /* EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post */

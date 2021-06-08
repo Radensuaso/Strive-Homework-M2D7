@@ -122,6 +122,14 @@ function removeLastPost() {
 /* removeLastPost() */
 
 /* EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name */
+function alertWhenHoverOnAuthor() {
+  const authorLinks = document.querySelectorAll(".blog-post h2 + p a")
+  for (const link of authorLinks) {
+    link.addEventListener("mouseover", function () {
+      alert(`This author is: ${link.innerText}`)
+    })
+  }
+}
 
 window.onload = function () {
   const newerButton = document.querySelector(
@@ -133,4 +141,5 @@ window.onload = function () {
   const olderButton = document.querySelector("nav.blog-pagination a")
 
   olderButton.addEventListener("click", removeLastPost)
+  alertWhenHoverOnAuthor()
 }

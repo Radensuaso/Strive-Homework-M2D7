@@ -127,6 +127,7 @@ window.onload = function () {
   const newerButton = document.querySelector(
     "nav.blog-pagination a:last-of-type"
   )
+  newerButton.classList.remove("disabled")
   newerButton.addEventListener("click", addNewBlogPost)
 
   const olderButton = document.querySelector("nav.blog-pagination a")

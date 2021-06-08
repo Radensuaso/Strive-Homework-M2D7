@@ -55,6 +55,17 @@ function removeMagnifyingGlass() {
 /* removeMagnifyingGlass() */
 
 /* EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post */
+function removeFirst50Characters() {
+  const arrayOfTheTwoFirstParagraphs = document.querySelectorAll(
+    ".blog-post h2 + p + p"
+  )
+
+  for (const p of arrayOfTheTwoFirstParagraphs) {
+    p.innerText = p.innerText.substring(50)
+  }
+}
+
+/* removeFirst50Characters() */
 
 /* EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title) */
 /* EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post */

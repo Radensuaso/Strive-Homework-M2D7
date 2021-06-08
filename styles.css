@@ -24,7 +24,7 @@ nav.nav a:nth-of-type(even) {
 }
 
 /* EX6) Write a selector to target the last blog post */
-main div.row div.blog-main div:nth-of-type(2) {
+main div.row div.blog-main div:last-of-type {
   background-color: coral;
 }
 

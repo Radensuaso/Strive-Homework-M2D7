@@ -4,7 +4,7 @@ div.jumbotron div.col-md-6 h1 {
 }
 
 /* EX2) Write a selector to target every children of the navbar */
-nav > a {
+nav.nav > a {
   background-color: aqua;
 }
 
@@ -19,15 +19,36 @@ main div.row div.blog-main div:nth-of-type(1) {
 }
 
 /* EX5) Write a selector to target the "even" links in the navbar*/
-nav a:nth-of-type(even) {
+nav.nav a:nth-of-type(even) {
   background-color: chartreuse;
 }
 
 /* EX6) Write a selector to target the last blog post */
+main div.row div.blog-main div:nth-of-type(2) {
+  background-color: coral;
+}
+
 /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
+aside div ol.list-unstyled.mb-0 {
+  background-color: darkseagreen;
+}
+
 /* EX8) Write a selector to target the second post author */
+main div.row div.blog-main div:nth-of-type(2) h2 + p a {
+  font-weight: bold;
+  font-size: 30px;
+}
+
 /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
+p:last-of-type a {
+  font-size: 40px;
+  font-weight: bold;
+}
+
 /* EX10) Write a selector to target the footer */
+footer.blog-footer {
+  background-color: #87a4db;
+}
 
 /*Previously set in the Homework*/
 .bd-placeholder-img {

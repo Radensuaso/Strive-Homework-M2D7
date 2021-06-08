@@ -68,5 +68,68 @@ function removeFirst50Characters() {
 /* removeFirst50Characters() */
 
 /* EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title) */
+function addNewBlogPost() {
+  const lastBlogPost = document.querySelector(
+    "div.blog-main div.blog-post:last-of-type"
+  )
+
+  const newBlogPost = document.createElement("div")
+  newBlogPost.classList.add("blog-post")
+  newBlogPost.innerHTML = `<h2 class="blog-post-title">This was added with Javascript</h2>
+    <p class="blog-post-meta">
+      December 14, 2013 by <a href="#">André</a>
+    </p>
+
+    <p>
+      All new . Cum sociis natoque penatibus et magnis dis parturient montes,
+      nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
+      consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+      dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+      ut fermentum massa justo sit amet risus.
+    </p>
+    <ul>
+      <li>
+        Also new. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et.
+      </li>
+      <li>New. Donec id elit non mi porta gravida at eget metus.</li>
+      <li>New. Nulla vitae elit libero, a pharetra augue.</li>
+    </ul>
+    <p>
+      Yep, new. Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
+      mattis consectetur purus sit amet fermentum. Aenean lacinia
+      bibendum nulla sed consectetur.
+    </p>
+    <p>
+      Aaand last paragraph. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae
+      elit libero, a pharetra augue.
+    </p>
+  </div>`
+
+  lastBlogPost.insertAdjacentElement("afterend", newBlogPost)
+}
+
+/* addNewBlogPost() */
+
 /* EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post */
+function removeLastPost() {
+  const lastBlogPost = document.querySelector(
+    "div.blog-main div.blog-post:last-of-type"
+  )
+  lastBlogPost.remove()
+}
+
+/* removeLastPost() */
+
 /* EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name */
+
+window.onload = function () {
+  const newerButton = document.querySelector(
+    "nav.blog-pagination a:last-of-type"
+  )
+  newerButton.addEventListener("click", addNewBlogPost)
+
+  const olderButton = document.querySelector("nav.blog-pagination a")
+
+  olderButton.addEventListener("click", removeLastPost)
+}

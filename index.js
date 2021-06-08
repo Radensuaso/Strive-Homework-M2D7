@@ -10,7 +10,7 @@ function addNewLinkToNavbar() {
   navbar.appendChild(link)
 }
 
-addNewLinkToNavbar()
+/* addNewLinkToNavbar() */
 
 /* EX12) Write a function to change the color of the main title */
 function changeColorOfH1() {
@@ -18,7 +18,7 @@ function changeColorOfH1() {
   h1.style.color = "green"
 }
 
-changeColorOfH1()
+/* changeColorOfH1() */
 
 /* EX13) Write a function to change the background of the jumbotron */
 function changeJumbotronBackground() {
@@ -27,10 +27,18 @@ function changeJumbotronBackground() {
     "url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__480.jpg')"
 }
 
-changeJumbotronBackground()
+/* changeJumbotronBackground() */
 
 /* EX14) Write a function to remove all the links under "Elsewhere" */
+function removeAllLinksUnderElsewhere() {
+  const secondOrderedList = document.querySelector("aside div:last-of-type ol")
+  secondOrderedList.innerHTML = ""
+}
+
+/* removeAllLinksUnderElsewhere() */
+
 /* EX15) Write a function to change the column size for heading in jumbotron */
+
 /* EX16) Write a function to remove the "Search" magnifying glass icon */
 /* EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post */
 /* EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title) */
